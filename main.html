@@ -1,42 +1,69 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap 3 Carousel</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 </head>
 <body>
-    <!-- Write your code here -->
-	<div id="carousel" class="carousel slide">
-      <div class="carousel-inner " >
-        <div class="carousel-item first-slide">
-          <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#555" dy=".3em">First slide</text></svg>
+
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+            <li data-target="#myCarousel" data-slide-to="4"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+            <div class="item first-slide">
+                <svg class="bd-placeholder-img" width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="100%" height="100%" fill="#777"></rect>
+                    <text x="50%" y="50%" fill="#555" dy=".3em">First Slide</text>
+                </svg>
+            </div>
+            <div class="item second-slide">
+                <svg class="bd-placeholder-img" width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="100%" height="100%" fill="#666"></rect>
+                    <text x="50%" y="50%" fill="#444" dy=".3em">Second Slide</text>
+                </svg>
+            </div>
+            <div class="item third-slide active">
+                <svg class="bd-placeholder-img" width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="100%" height="100%" fill="#555"></rect>
+                    <text x="50%" y="50%" fill="#333" dy=".3em">Third Slide</text>
+                </svg>
+            </div>
+            <div class="item fourth-slide">
+                <svg class="bd-placeholder-img" width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="100%" height="100%" fill="#444"></rect>
+                    <text x="50%" y="50%" fill="#222" dy=".3em">Fourth Slide</text>
+                </svg>
+            </div>
+            <div class="item fifth-slide">
+                <svg class="bd-placeholder-img" width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="100%" height="100%" fill="#333"></rect>
+                    <text x="50%" y="50%" fill="#111" dy=".3em">Fifth Slide</text>
+                </svg>
+            </div>
         </div>
-        <div class="carousel-item second-slide">
-          <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Second slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#666"></rect><text x="50%" y="50%" fill="#444" dy=".3em">Second slide</text></svg>
-        </div>
-        <div class="carousel-item third-slide active">
-          <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Third slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#555"></rect><text x="50%" y="50%" fill="#333" dy=".3em">Third slide</text></svg>
-        </div>
-        <div class="carousel-item fourth-slide active">
-        <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Third slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#555"></rect><text x="50%" y="50%" fill="#333" dy=".3em">Fourth slide</text></svg>
-        </div>
-        <div class="carousel-item fifth-slide active">
-        <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Third slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#555"></rect><text x="50%" y="50%" fill="#333" dy=".3em">fifth slide</text></svg>
-        </div>
-    
-      </div>
-      <button class="carousel-control-prev carousel-control glyphicon-chevron-left left" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">left</span>
-      </button>
-      <button class="carousel-control-next carousel-control glyphicon-chevron-right right" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">right</span>
-      </button>
+
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
     </div>
-    <!-- Bootstrap Bundle with Popper -->
-	
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
 </body>
- 
 </html>
